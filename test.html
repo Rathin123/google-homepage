@@ -14,10 +14,12 @@
             height: 100%;
             width: 100%;
             margin: 0;
+
+            font-family: arial, sans-serif;
+            font-size: 14px;
         }
 
         a {
-            color: #222222;
             text-decoration: none;
         }
 
@@ -48,16 +50,55 @@
 
 
             display: flex;
+            flex-wrap: nowrap;
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            /* gap adds space between items*/
-            gap: 10px;
+            height: 60px;
+            padding: 6px;
         }
 
-        header .left-header{
+        header a {
+            color: #222222;
+        }
+
+        header .left-header {
             align-self: center;
             margin-right: auto;
+            font-size: 14px;
+
+            padding: 0px 0px 0px 27px;
+        }
+
+        .store {
+            margin: 0px 5px 0px 5px;
+            padding: 5px;
+        }
+
+
+        .about {
+            margin: 0px 15px 5px 0px;
+            padding: 5px;
+        }
+
+        header .right-header {
+            align-self: flex-end;
+            margin-left: auto;
+
+            line-height: 24px;
+            font-size: 13px;
+
+            height: 48px;
+            padding-left: 32px;
+        }
+
+        .gmail {
+            padding-left: 15px;
+        }
+
+        .images {
+            padding-left: 15px;
+            padding-right: 15px;
         }
 
 
@@ -69,8 +110,40 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
         }
+
+
+        main .title {
+            flex: 0 2 0px;
+            margin-top: auto;
+
+        }
+
+        main form {
+            flex: 0 1 55%;
+            margin-bottom: auto;
+        }
+
+        main form .bar{
+            display: flex;
+            border-radius: 24px;
+            width: 540px;
+            height: 44px;
+            border: 1px solid #dfe1e5;
+        }
+
+        main form input {
+            font-size: 16px;
+            border: 0px;
+            height: 40px;
+            flex: 0 1 440px;
+            outline: none;
+            background-color: rgba(128, 128, 128, 0);
+            padding: 0px 0px 0px 30px;
+        }
+
+
+
 
         /* .title {
             grid-area: "title";
@@ -103,11 +176,42 @@
 
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            justify-content: flex-end;
             align-items: center;
+            flex-wrap: wrap;
+
+            min-height: 55px;
+            padding: 0px 20px;
 
             /* used to add space between items */
-            gap: 10px;
+
+        }
+
+        footer a {
+            color: #70757A;
+        }
+
+        footer .left-footer {
+            align-self: center;
+            margin-right: auto;
+        }
+
+        footer a {
+            padding: 15px;
+        }
+
+        footer .middle-footer {
+            align-self: center;
+            margin: auto;
+        }
+
+        footer .right-footer {
+            align-self: center;
+            margin-left: auto;
+        }
+
+        .leaf {
+            height: 16px;
         }
     </style>
 
@@ -122,7 +226,7 @@
                 <a class="about" href="#"> About </a>
                 <a class="store" href="#"> Store </a>
             </div>
-            
+
             <!-- <div class="center-header">
 
             </div> -->
@@ -130,12 +234,13 @@
             <div class="right-header">
                 <a class="gmail" href="#"> Gmail </a>
                 <a class="images" href="#"> Images </a>
-                <div class="apps"></div>
+                <!-- <div class="apps"></div> -->
                 <button class="login">Sign in</button>
             </div>
         </header>
 
         <main>
+
 
             <div class="title">
                 <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
@@ -153,6 +258,7 @@
                     <button class="search_btn">Google Search</button>
                     <button class="lucky_btn">I'm Feeling Lucky</button>
                 </div>
+                
             </form>
 
         </main>
@@ -163,7 +269,9 @@
                 <a class="biz" href="#"> Business </a>
                 <a class="how" href="#"> How Search Works </a>
             </div>
-            <div class="middle-footer"> <a href="#"> Carbon Neutral Since 2007 </a></div>
+            <div class="middle-footer"> <a href="#"><img class='leaf'
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC"
+                        alt=leaf> Carbon Neutral Since 2007 </a></div>
             <div class="right-footer">
                 <a class="Privacy" href="#">Privacy</a>
                 <a class="terms" href="#">Terms</a>
