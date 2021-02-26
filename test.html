@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Google</title>
+
+    <style>
+        html,
+        body {
+            /* html and body fill the whole page. margin=0 removes the scroll bar by removing outer blank space */
+            height: 100%;
+            width: 100%;
+            margin: 0;
+        }
+
+        a {
+            color: #222222;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            min-height: 100%;
+
+            display: grid;
+
+            grid-template-areas:
+                "header"
+                "main"
+                "footer";
+
+
+            grid-auto-columns: auto;
+            grid-auto-rows: auto 1fr auto;
+
+        }
+
+        header {
+            grid-area: "header";
+            align-self: center;
+            justify-self: stretch;
+
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            /* gap adds space between items*/
+            gap: 10px;
+        }
+
+        header .left-header{
+            align-self: center;
+            margin-right: auto;
+        }
+
+
+        main {
+            grid-area: "main";
+            align-self: top;
+            justify-self: center;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* .title {
+            grid-area: "title";
+            justify-self: center;
+            align-self: center;
+            background-color: lawngreen;
+        }
+
+        .title img{
+            width: 272px;
+            height: 92px;
+        }
+
+        .bar {
+            background-color: lightskyblue;
+            justify-self: center;
+            align-self: center;
+            grid-area: "bar";
+        }
+
+        .buttons{
+            grid-area: "buttons";
+        } */
+
+        footer {
+            grid-area: "footer";
+            justify-self: stretch;
+            align-self: center;
+            background-color: #f2f2f2;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            /* used to add space between items */
+            gap: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="left-header">
+                <a class="about" href="#"> About </a>
+                <a class="store" href="#"> Store </a>
+            </div>
+            
+            <!-- <div class="center-header">
+
+            </div> -->
+
+            <div class="right-header">
+                <a class="gmail" href="#"> Gmail </a>
+                <a class="images" href="#"> Images </a>
+                <div class="apps"></div>
+                <button class="login">Sign in</button>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="title">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+                    alt="Google Logo">
+            </div>
+
+            <!-- may need to look at the form tag here... -->
+            <form>
+
+                <div class="bar">
+                    <input type="text">
+                </div>
+
+                <div class=buttons>
+                    <button class="search_btn">Google Search</button>
+                    <button class="lucky_btn">I'm Feeling Lucky</button>
+                </div>
+            </form>
+
+        </main>
+
+        <footer>
+            <div class="left-footer">
+                <a class="ad" href="#"> Advertising </a>
+                <a class="biz" href="#"> Business </a>
+                <a class="how" href="#"> How Search Works </a>
+            </div>
+            <div class="middle-footer"> <a href="#"> Carbon Neutral Since 2007 </a></div>
+            <div class="right-footer">
+                <a class="Privacy" href="#">Privacy</a>
+                <a class="terms" href="#">Terms</a>
+                <a class="settings" href="#">Settings</a>
+            </div>
+
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
